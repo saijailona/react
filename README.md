@@ -1,4 +1,4 @@
-https://users.metropolia.fi/~saijatem/Mediapalvelut%20ja%20kayttajakokemus/react/Viikko1/build/
+https://users.metropolia.fi/~saijatem/Mediapalvelut%20ja%20kayttajakokemus/react/Viikko1/A/build/
 
 # Getting Started with Create React App
 
