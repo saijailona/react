@@ -1,3 +1,5 @@
+https://users.metropolia.fi/~saijatem/Mediapalvelut%20ja%20kayttajakokemus/react/Viikko1/B/build/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
