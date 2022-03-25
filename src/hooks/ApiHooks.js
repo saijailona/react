@@ -20,10 +20,7 @@ const fetchJson = async (url, options = {}) => {
 };
 
 const useMedia = () => {
-  // TODO: move mediaArray state here
-  // TODO: move loadMedia function here
-  // TODO: move useEffect here
-
+  
   const [mediaArray, setMediaArray] = useState([]);
 
   const getMedia = async () => {
