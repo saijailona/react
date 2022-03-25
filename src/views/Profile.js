@@ -1,9 +1,34 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
+import { useEffect, useState } from "react";
+import { useUser } from "../hooks/ApiHooks";
+
+
+
+
 const Profile = () => {
-    return (
-        <>
-          <h1>Profile</h1>
-        </>
-    );
-  };
+  const [user, setUser]= useState({});
+ const {getUser} = useUser();
+ const fetchUser = async () => {
+   const userData = await getUser(localStorage.getItem('token'));
+   setUser(userData);
+ };
+
+ useEffect(() => {
+   fetchUser();
+ }, []);
+ 
+ console.log(user);
+
+ return (
+   <>
+   <h1>Profile</h1>
+   <ul>
+     <li>{user.username}</li>
+   </ul>
+   </>
+ );
+
+};
   
   export default Profile;

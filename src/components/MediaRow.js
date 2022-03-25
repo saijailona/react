@@ -13,7 +13,7 @@ const MediaRow = ({file}) => {
         <p>{file.description}</p>
       </td>
       <td>
-        <Link to={'./single'} state={{file}}>View</Link>
+        <Link to={'/single'} state={{file}}>View</Link>
       </td>
     </tr>
   );
