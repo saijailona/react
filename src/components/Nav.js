@@ -1,13 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from 'react';
+import { useContext, useEffect} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import { MediaContext } from '../contexts/MediaContexts';
 import { useUser } from '../hooks/ApiHooks';
 
-
-
 const Nav = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useContext(MediaContext);
   const {getUser} = useUser();
   const navigate = useNavigate();
 
@@ -15,10 +13,10 @@ const Nav = () => {
     try {
     const userData = await getUser(localStorage.getItem('token'));
     console.log(userData);
-    setLoggedIn(true);
+    setUser(userData);
     navigate('/home');
     } catch (err) {
-      setLoggedIn(false);
+      setUser(null);
       navigate('/');
     }
    };
@@ -33,15 +31,20 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <Link to={'/'}>Home</Link>
+          <Link to={'/home'}>Home</Link>
         </li>
+        {user && (
+        <>
         <li>
           <Link to={'/profile'}>Profile</Link>
         </li>
         <li>
           <Link to={'/logout'}>Logout</Link>
         </li>
+        </>
+        )}
       </ul>
+        
     </nav>
   );
 };

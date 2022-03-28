@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import PropTypes from 'prop-types';
 import {useLogin} from '../hooks/ApiHooks';
 import useForm from '../hooks/Formhooks';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { MediaContext } from '../contexts/MediaContexts';
 
 const LoginForm = (props) => {
+    const [user, setUser] = useContext(MediaContext);
   const alkuarvot = {
     username: '',
     password: '',
@@ -17,8 +21,8 @@ const LoginForm = (props) => {
     console.log('doLogin');
     try {
         const userData = await postLogin(inputs);
-        console.log(userData);
         localStorage.setItem('token', userData.token);
+        setUser(userData.user);
         navigate('/home');
     } catch (err) {
         alert(err.message);
