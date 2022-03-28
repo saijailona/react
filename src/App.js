@@ -6,6 +6,7 @@ import Home from './views/Home';
 import Profile from './views/Profile';
 import Single from './views/Single';
 import Login from './views/Login'
+import Logout from './views/Logout';
 
 // add to App.js after imports
 
@@ -20,6 +21,7 @@ function App() {
       <Route path='/home' element={<Home />} />
       <Route path='/profile' element={<Profile />} />
       <Route path='/single' element={<Single />} />
+      <Route path='/logout' element={<Logout />} />
     </Routes>
   </Router>
   );

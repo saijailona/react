@@ -25,6 +25,8 @@ const Profile = () => {
    <h1>Profile</h1>
    <ul>
      <li>{user.username}</li>
+     <li>{user.email}</li>
+      <li>{user.full_name}</li>
    </ul>
    </>
  );

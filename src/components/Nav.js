@@ -10,7 +10,7 @@ const Nav = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const {getUser} = useUser();
   const navigate = useNavigate();
-  
+
   const fetchUser = async () => {
     try {
     const userData = await getUser(localStorage.getItem('token'));
@@ -37,6 +37,9 @@ const Nav = () => {
         </li>
         <li>
           <Link to={'/profile'}>Profile</Link>
+        </li>
+        <li>
+          <Link to={'/logout'}>Logout</Link>
         </li>
       </ul>
     </nav>
