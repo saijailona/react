@@ -1,3 +1,4 @@
+import React from 'react';
 import {Container} from '@mui/material';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
@@ -10,6 +11,7 @@ import Profile from './views/Profile';
 import Single from './views/Single';
 import {themeOptions} from './theme/themeOptions';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
+import Upload from './views/Upload';
 
 const theme = createTheme(themeOptions);
 
@@ -27,6 +29,7 @@ const App = () => {
               <Route path="/profile" element={<Profile />} />
               <Route path="/single" element={<Single />} />
               <Route path="/logout" element={<Logout />} />
+              <Route path="/upload" element={<Upload />} />
             </Routes>
           </Container>
         </ThemeProvider>
