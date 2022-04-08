@@ -1,14 +1,9 @@
 // import PropTypes from 'prop-types';
-import { useMedia } from '../hooks/ApiHooks';
+import {useMedia} from '../hooks/ApiHooks';
 import MediaRow from './MediaRow';
 
-
-
 const MediaTable = () => {
-
- const {mediaArray} = useMedia();
-
-
+  const {mediaArray} = useMedia();
   console.log(mediaArray);
   return (
     <table>
@@ -21,5 +16,6 @@ const MediaTable = () => {
   );
 };
 
+MediaTable.propTypes = {};
 
 export default MediaTable;

@@ -1,14 +1,10 @@
-tbody{
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+table {
+  width: 40rem;
   margin: auto;
-}
-p{
-  width: 90%;
+  border-spacing: 0;
 }
 
-tr{
-  border-bottom: 1px solid black;
+td {
+  padding: 1rem;
+  border-bottom: #ccc 1px solid;
 }
