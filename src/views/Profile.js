@@ -1,3 +1,4 @@
+import React from 'react';
 import {useContext, useEffect, useState} from 'react';
 import {MediaContext} from '../contexts/MediaContext';
 import {useTag} from '../hooks/ApiHooks';
@@ -45,14 +46,14 @@ const Profile = () => {
           <CardContent>
             <List>
               <ListItem>
-                <ListItemAvatar sx={{mx: 'auto', width: '100%'}}>
+                <ListItemAvatar sx={{width: '100%'}}>
                   <Avatar
                     variant="square"
                     src={avatar.filename}
                     imgProps={{
                       alt: `${user.username}'s profile image`,
                     }}
-                    sx={{mx: 'auto', width: '100%', height: '30vh'}}
+                    sx={{width: '100%', height: '30vh'}}
                   />
                 </ListItemAvatar>
               </ListItem>

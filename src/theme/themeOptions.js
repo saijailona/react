@@ -1,25 +1,25 @@
 const themeOptions = {
-    palette: {
-      type: 'light',
-      primary: {
-        main: '#00104a',
-      },
-      secondary: {
-        main: '#d60202',
-      },
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#00104a',
     },
-    typography: {
-      fontFamily: 'Lato',
-      body1: {
-        fontFamily: 'Droid Sans',
-      },
-      body2: {
-        fontFamily: 'Droid Sans',
-      },
+    secondary: {
+      main: '#d60202',
     },
-    shape: {
-      borderRadius: 16,
+  },
+  typography: {
+    fontFamily: 'Lato',
+    body1: {
+      fontFamily: 'Droid Sans',
     },
-  };
-  
-  export {themeOptions};
+    body2: {
+      fontFamily: 'Droid Sans',
+    },
+  },
+  shape: {
+    borderRadius: 16,
+  },
+};
+
+export {themeOptions};

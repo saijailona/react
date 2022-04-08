@@ -1,4 +1,5 @@
 // import PropTypes from 'prop-types';
+import React from 'react';
 import {ImageList} from '@mui/material';
 import {useMedia} from '../hooks/ApiHooks';
 import {useWindowSize} from '../hooks/WindowHooks';
