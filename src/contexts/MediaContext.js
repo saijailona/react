@@ -16,5 +16,4 @@ MediaProvider.propTypes = {
   children: PropTypes.node,
 };
 
-
 export {MediaContext, MediaProvider};

@@ -50,7 +50,6 @@ const useUser = () => {
     return await fetchJson(baseUrl + 'users/user', fetchOptions);
   };
 
-
   const getUsername = async (username) => {
     const checkUser = await fetchJson(baseUrl + 'users/username/' + username);
     if (checkUser.available) {
@@ -88,4 +87,16 @@ const useLogin = () => {
   return {postLogin};
 };
 
-export {useMedia, useLogin, useUser};
+const useTag = () => {
+  const getTag = async (tag) => {
+    const tagResult = await fetchJson(baseUrl + 'tags/' + tag);
+    if (tagResult.length > 0) {
+      return tagResult;
+    } else {
+      throw new Error('No results');
+    }
+  };
+  return {getTag};
+};
+
+export {useMedia, useLogin, useUser, useTag};
