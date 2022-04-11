@@ -35,10 +35,13 @@ const Single = () => {
       </Typography>
       <Card>
         <CardMedia
-          component="img"
-          image={mediaUrl + file.filename}
+          component={file.media_type === 'image' ? 'img' : file.media_type}
+          controls={true}
+          poster={mediaUrl + file.screenshot}
+          src={mediaUrl + file.filename}
           alt={file.title}
           sx={{
+            backgroundImage: 'logo512.png'
             height: '60vh',
             filter: `
           brightness(${filters.brightness}%)
